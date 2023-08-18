@@ -1,0 +1,43 @@
+﻿@model CustomerProcessViewModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Para Çekme Formu</title>
+    <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+</head>
+<body>
+
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <form method="post" onsubmit="return showConfirmation()">
+                    <div class="form-group">
+                        <label for="Name">Müşteri Adı Soyadı</label>
+                        <input type="text" class="form-control" id="Name" name="Name" placeholder="Müşteri Adı Soyadı" />
+                    </div>
+                    <div class="form-group">
+                        <label for="Amount">Çekilecek Tutar</label>
+                        <input type="text" class="form-control" id="Amount" name="Amount" placeholder="Çekilecek Tutar" />
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-danger">Para Çek</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showConfirmation() {
+            alert("İşleminiz başarıyla gerçekleştirildi!");
+            return true; 
+        }
+    </script>
+
+</body>
+</html>
+
