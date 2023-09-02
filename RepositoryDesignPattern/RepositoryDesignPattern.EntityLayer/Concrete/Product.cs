@@ -15,3 +15,4 @@ namespace RepositoryDesignPattern.EntityLayer.Concrete
         public int CategoryID { get; set; }
 
     }
+}
