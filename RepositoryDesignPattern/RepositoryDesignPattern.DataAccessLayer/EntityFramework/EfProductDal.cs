@@ -21,7 +21,7 @@ namespace RepositoryDesignPattern.DataAccessLayer.EntityFramework
 
         public List<Product> ProductListWithCategory()
         {
-            throw new NotImplementedException();
+            return _context.Products.Include(x => x.Category).ToList();
         }
     }
 }

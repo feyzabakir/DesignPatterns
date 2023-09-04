@@ -32,6 +32,9 @@ namespace RepositoryDesignPattern.PresentationLayer
             services.AddScoped<ICategoryService, CategoryManager>();
             services.AddScoped<ICategoryDal, EfCategoryDal>();
 
+            services.AddScoped<IProductService, ProductManager>();
+            services.AddScoped<IProductDal, EfProductDal>();
+
             services.AddEntityFrameworkNpgsql().AddDbContext<Context>(opt =>
   opt.UseNpgsql(Configuration.GetConnectionString("DefaultConnection")));
             services.AddControllersWithViews();
