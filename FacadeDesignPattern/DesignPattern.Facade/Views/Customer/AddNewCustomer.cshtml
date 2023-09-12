@@ -1,27 +1,23 @@
-﻿@model List<DesignPattern.Facade.DAL.Customer>
+﻿@model DesignPattern.Facade.DAL.Customer
 @{
     ViewData["Title"] = "AddNewCustomer";
     Layout = "~/Views/Shared/_FacadeLayout.cshtml";
 }
 
-<h2>Müşteri Listesi</h2>
+<h1>Yeni Müşteri Girişi</h1>
 
-<table class="table table-bordered">
-    <tr>
-        <th>#</th>
-        <th>Müşteri Adı</th>
-        <th>Müşteri Soyadı</th>
-        <th>Şehir</th>
-    </tr>
-    @foreach (var item in Model)
-    {
-        <tr>
-            <td>@item.CustomerID</td>
-            <td>@item.CustomerName</td>
-            <td>@item.CustomerSurname</td>
-            <td>@item.CustomerCity</td>
-        </tr>
-    }
-</table>
-<a href="/Customer/AddNewCustomer" class="btn btn-primary">Yeni Müşteri Girişi</a>
-
+<form method="post">
+    <label>Müşteri Adı</label>
+    <input type="text" class="form-control" asp-for="CustomerName" />
+    <br />
+    <label>Müşteri Soyadı</label>
+    <input type="text" class="form-control" asp-for="CustomerSurname" />
+    <br />
+     <label>Müşteri Adresi</label>
+    <input type="text" class="form-control" asp-for="CustomerAddress" />
+    <br />
+    <label>Müşteri Şehri</label>
+    <input type="text" class="form-control" asp-for="CustomerCity" />
+    <br />
+    <button class="btn btn-primary">Müşteriyi Kaydet</button>
+</form>
